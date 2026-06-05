@@ -1,0 +1,21 @@
+{
+  "name": "tma-backend",
+  "version": "1.0.0",
+  "description": "Task Manager Application - Backend API",
+  "main": "server.js",
+  "type": "module",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node --watch server.js"
+  },
+  "dependencies": {
+    "@hono/node-server": "^1.13.7",
+    "hono": "^4.7.4",
+    "mongoose": "^8.8.0",
+    "jsonwebtoken": "^9.0.2",
+    "bcryptjs": "^2.4.3",
+    "dotenv": "^16.4.5",
+    "nodemailer": "^6.9.15",
+    "node-cron": "^3.0.3"
+  }
+}

@@ -1,0 +1,166 @@
+.register-page {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  padding-top: 88px;
+  background: var(--bg-primary);
+  position: relative;
+  overflow: hidden;
+}
+
+.register-page::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle at 70% 30%, rgba(139, 92, 246, 0.08) 0%, transparent 50%),
+              radial-gradient(circle at 30% 70%, rgba(59, 130, 246, 0.08) 0%, transparent 50%);
+  animation: gradientShift 10s ease-in-out infinite;
+  background-size: 100% 100%;
+  pointer-events: none;
+}
+
+.register-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  max-width: 900px;
+  width: 100%;
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+  box-shadow: var(--shadow-lg);
+  position: relative;
+  z-index: 1;
+  animation: slideUp 0.5s ease;
+}
+
+.register-illustration {
+  background: linear-gradient(135deg, #1e1b4b 0%, #0a0e1a 100%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 48px;
+  position: relative;
+  overflow: hidden;
+}
+
+.register-illustration::after {
+  content: '';
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(139, 92, 246, 0.2), transparent 70%);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  animation: float 4s ease-in-out infinite;
+}
+
+.register-illustration-icon {
+  font-size: 5rem;
+  margin-bottom: 24px;
+  position: relative;
+  z-index: 1;
+  animation: float 3s ease-in-out infinite;
+}
+
+.register-illustration h2 {
+  font-size: 1.5rem;
+  text-align: center;
+  margin-bottom: 8px;
+  position: relative;
+  z-index: 1;
+}
+
+.register-illustration p {
+  color: var(--text-secondary);
+  text-align: center;
+  font-size: 0.875rem;
+  position: relative;
+  z-index: 1;
+}
+
+.register-form-section {
+  padding: 48px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.register-form-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.register-form-subtitle {
+  color: var(--text-muted);
+  font-size: 0.875rem;
+  margin-bottom: 32px;
+}
+
+.register-form .form-group {
+  margin-bottom: 20px;
+}
+
+.register-form-footer {
+  margin-top: 24px;
+  text-align: center;
+  font-size: 0.875rem;
+  color: var(--text-muted);
+}
+
+.register-form-footer a {
+  color: var(--accent-blue);
+  font-weight: 500;
+}
+
+.register-error {
+  background: var(--accent-rose-light);
+  border: 1px solid rgba(239, 68, 68, 0.2);
+  color: var(--accent-rose);
+  padding: 10px 16px;
+  border-radius: var(--radius-md);
+  font-size: 0.8125rem;
+  margin-bottom: 20px;
+}
+
+.password-strength {
+  height: 4px;
+  border-radius: 2px;
+  background: var(--bg-glass);
+  margin-top: 8px;
+  overflow: hidden;
+}
+
+.password-strength-bar {
+  height: 100%;
+  border-radius: 2px;
+  transition: all var(--transition-normal);
+}
+
+.password-strength-text {
+  font-size: 0.75rem;
+  margin-top: 4px;
+}
+
+@media (max-width: 768px) {
+  .register-container {
+    grid-template-columns: 1fr;
+  }
+
+  .register-illustration {
+    display: none;
+  }
+
+  .register-form-section {
+    padding: 32px 24px;
+  }
+}

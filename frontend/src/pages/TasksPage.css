@@ -1,0 +1,19 @@
+.tasks-page { padding-top: 88px; padding-bottom: 40px; min-height: 100vh; }
+.tasks-header { display: flex; align-items: center; justify-content: space-between; margin-bottom: 24px; flex-wrap: wrap; gap: 16px; }
+.tasks-header h1 { font-size: 1.75rem; display: flex; align-items: center; gap: 10px; }
+.tasks-header-actions { display: flex; align-items: center; gap: 12px; }
+.view-toggle { display: flex; background: var(--bg-card); border: 1px solid var(--border-color); border-radius: var(--radius-md); overflow: hidden; }
+.view-toggle-btn { background: transparent; border: none; color: var(--text-muted); padding: 8px 16px; font-family: var(--font-family); font-size: 0.8125rem; cursor: pointer; transition: all var(--transition-fast); display: flex; align-items: center; gap: 6px; }
+.view-toggle-btn.active { background: var(--accent-blue-light); color: var(--accent-blue); }
+.view-toggle-btn:hover:not(.active) { color: var(--text-primary); }
+.add-task-btn { position: fixed; bottom: 32px; right: 32px; width: 56px; height: 56px; border-radius: var(--radius-full); background: var(--gradient-primary); border: none; color: #fff; font-size: 1.5rem; cursor: pointer; box-shadow: var(--shadow-glow-blue); transition: all var(--transition-normal); display: flex; align-items: center; justify-content: center; z-index: 100; }
+.add-task-btn:hover { transform: scale(1.1); box-shadow: 0 0 30px rgba(59,130,246,0.5); }
+.tasks-layout { display: grid; grid-template-columns: 1fr 320px; gap: 24px; }
+.tasks-main { min-width: 0; }
+.tasks-sidebar { display: flex; flex-direction: column; gap: 20px; }
+.task-list { display: flex; flex-direction: column; gap: 10px; }
+.no-tasks { text-align: center; padding: 60px 24px; color: var(--text-muted); }
+.no-tasks-icon { font-size: 3rem; margin-bottom: 16px; opacity: 0.5; }
+.no-tasks h3 { color: var(--text-secondary); margin-bottom: 8px; }
+@media (max-width: 1024px) { .tasks-layout { grid-template-columns: 1fr; } .tasks-sidebar { order: -1; } }
+@media (max-width: 768px) { .tasks-page { padding-top: 80px; } .add-task-btn { bottom: 24px; right: 24px; width: 48px; height: 48px; font-size: 1.25rem; } }

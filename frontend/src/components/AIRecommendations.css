@@ -1,0 +1,100 @@
+.ai-panel {
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-lg);
+  padding: 20px;
+  margin-bottom: 24px;
+  animation: slideInRight 0.4s ease;
+}
+
+.ai-panel-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 16px;
+}
+
+.ai-panel-title {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.9375rem;
+  font-weight: 600;
+}
+
+.ai-sparkle {
+  display: inline-flex;
+  animation: float 2s ease-in-out infinite;
+}
+
+.ai-refresh-btn {
+  background: var(--bg-glass);
+  border: 1px solid var(--border-color);
+  color: var(--text-secondary);
+  padding: 6px 12px;
+  border-radius: var(--radius-md);
+  font-family: var(--font-family);
+  font-size: 0.75rem;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.ai-refresh-btn:hover {
+  background: var(--bg-glass-hover);
+  color: var(--text-primary);
+}
+
+.ai-source {
+  font-size: 0.6875rem;
+  color: var(--text-muted);
+  padding: 2px 8px;
+  background: var(--accent-purple-light);
+  color: var(--accent-purple);
+  border-radius: var(--radius-full);
+}
+
+.ai-recommendations {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.ai-rec-card {
+  background: var(--bg-glass);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  padding: 14px;
+  transition: all var(--transition-fast);
+}
+
+.ai-rec-card:hover {
+  background: var(--bg-glass-hover);
+  border-color: var(--border-color-hover);
+}
+
+.ai-rec-title {
+  font-size: 0.8125rem;
+  font-weight: 600;
+  margin-bottom: 4px;
+  color: var(--text-primary);
+}
+
+.ai-rec-desc {
+  font-size: 0.8125rem;
+  color: var(--text-secondary);
+  line-height: 1.5;
+  margin: 0;
+}
+
+.ai-skeleton {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.ai-skeleton-card {
+  padding: 14px;
+}
